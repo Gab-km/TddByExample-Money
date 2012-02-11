@@ -2,13 +2,19 @@ package jp.gab_km;
 
 public class Franc {
 
-	public Franc(int i) {
-		// TODO Auto-generated constructor stub
+	private int amount;
+
+	public Franc(int amount) {
+		this.amount = amount;
 	}
 
-	public Object times(int i) {
-		// TODO Auto-generated method stub
-		return null;
+	public Franc times(int multiplier) {
+		return new Franc(amount * multiplier);
+	}
+	
+	public boolean equals(Object object) {
+		Franc franc = (Franc) object;
+		return amount == franc.amount;
 	}
 
 }
