@@ -1,6 +1,6 @@
 package jp.gab_km;
 
-public class Dollar {
+public class Dollar extends Money {
 
 	private int amount;
 
