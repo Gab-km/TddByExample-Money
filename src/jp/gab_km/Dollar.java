@@ -9,7 +9,7 @@ public class Dollar {
 	}
 
 	public void times(int i) {
-		amount = 5 * 2;
+		amount = amount * 2;
 	}
 
 }
