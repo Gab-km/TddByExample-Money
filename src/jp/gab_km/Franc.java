@@ -2,13 +2,13 @@ package jp.gab_km;
 
 public class Franc extends Money {
 	
-	public Franc(int amount) {
+	public Franc(int amount, String currency) {
 		this.amount = amount;
-		currency = "CHF";
+		this.currency = "CHF";
 	}
 
 	public Money times(int multiplier) {
-		return new Franc(amount * multiplier);
+		return Money.franc(amount * multiplier);
 	}
 
 }
