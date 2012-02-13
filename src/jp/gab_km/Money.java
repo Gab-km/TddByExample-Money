@@ -1,6 +1,6 @@
 package jp.gab_km;
 
-public abstract class Money {
+public class Money {
 	protected int amount;
 	protected String currency;
 	
@@ -15,7 +15,9 @@ public abstract class Money {
 				&& getClass().equals(money.getClass());
 	}
 	
-	abstract Money times(int multiplier);
+	Money times(int multiplier){
+		return null;
+	}
 
 	public static Money dollar(int amount) {
 		return new Dollar(amount, "USD");
@@ -27,6 +29,10 @@ public abstract class Money {
 	
 	String currency(){
 		return currency;
+	}
+	
+	public String toString() {
+		return amount + " " + currency;
 	}
 
 }
