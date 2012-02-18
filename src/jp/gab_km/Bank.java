@@ -3,7 +3,7 @@ package jp.gab_km;
 import java.util.HashMap;
 
 public class Bank {
-	
+
 	private HashMap<Pair, Integer> rates = new HashMap<>();
 
 	public Money reduce(Expression source, String to) {
@@ -11,7 +11,10 @@ public class Bank {
 	}
 
 	int rate(String from, String to) {
-		return (from.equals("CHF") && to.equals("USD")) ? 2 : 1;
+		if (from.equals(to))
+			return 1;
+		Integer rate = (Integer) rates.get(new Pair(from, to));
+		return rate.intValue();
 	}
 
 	public void addRate(String from, String to, int rate) {
